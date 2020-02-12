@@ -32,7 +32,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/api/auth', authRoutes);
 app.use('/api/analytics', passport.authenticate('jwt', { session: false }), analyticsRoutes);
 app.use('/api/category', passport.authenticate('jwt', { session: false }), categoryRoutes);
-app.use('/api/order', orderRoutes);
+app.use('/api/order', passport.authenticate('jwt', { session: false }), orderRoutes);
 app.use('/api/position', passport.authenticate('jwt', { session: false }), positionRoutes);
 
 module.exports = app;
