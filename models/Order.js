@@ -7,7 +7,7 @@ const orderSchema = new Schema({
         default: Date.now
     },
     order: {
-        type: Numder,
+        type: Number,
         required: true
     },
     list: [
